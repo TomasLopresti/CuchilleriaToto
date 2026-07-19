@@ -10,7 +10,7 @@ import rutasWeb from './modulos/web/rutas.web.mjs'
 import rutasAuth from './modulos/autenticacion/rutas.aut.mjs'
 import { verificarAcceso } from './modulos/autenticacion/controlador.aut.mjs'
 
-const PUERTO = process.env.PUERTO || 3000
+const PUERTO = process.env.PORT || process.env.PUERTO || 3000
 const PRODUCCION = process.env.NODE_ENV === 'production'
 
 const app = express()
