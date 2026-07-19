@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./recursos/imagenes/LogoFinal.png" type="image/png">
+  <title>Admin | Cuchillería Toto</title>
+  <link rel="stylesheet" href="./recursos/css/admin.css">
+</head>
+<body>
+  <div id="panel-admin">
+    <header class="admin-header">
+      <div>
+        <span class="admin-header-titulo">Cuchillería Toto</span>
+        <span class="admin-header-sub">Panel de Administración</span>
+      </div>
+      <a href="/logout" class="btn btn-cancelar">Cerrar sesión</a>
+    </header>
+
+    <div class="admin-contenido">
+
+      <!-- Pestañas -->
+      <div class="tabs">
+        <button class="tab-btn activo" data-tab="catalogo">Catálogo</button>
+        <button class="tab-btn" data-tab="galeria">Galería</button>
+      </div>
+
+      <!-- ── CATÁLOGO ──────────────────────────────────────────────── -->
+      <div class="tab-panel activo" id="tab-catalogo">
+        <div class="seccion-titulo">
+          <span>Productos del catálogo</span>
+          <button class="btn btn-primario" id="btn-nuevo-catalogo">+ Agregar producto</button>
+        </div>
+        <div id="lista-catalogo"><p class="estado-cargando">Cargando productos…</p></div>
+        <div class="admin-form-wrap" id="form-catalogo-wrap">
+          <p class="admin-form-titulo" id="form-catalogo-titulo">Nuevo producto</p>
+          <form id="form-catalogo" enctype="multipart/form-data" novalidate>
+            <input type="hidden" id="cat-id">
+            <div class="form-grid">
+              <div class="campo"><label for="cat-nombre">Nombre *</label><input type="text" id="cat-nombre" required></div>
+              <div class="campo"><label for="cat-precio">Precio (ARS) *</label><input type="number" id="cat-precio" min="0" required></div>
+              <div class="campo"><label for="cat-medidas">Medidas *</label><input type="text" id="cat-medidas"></div>
+              <div class="campo"><label for="cat-material">Material *</label><input type="text" id="cat-material"></div>
+              <div class="campo"><label for="cat-cabo">Cabo (mango) *</label><input type="text" id="cat-cabo"></div>
+              <div class="campo campo-ancho">
+                <label for="cat-imagen">Imagen</label>
+                <input type="file" id="cat-imagen" name="archivo" accept="image/*">
+                <small id="cat-imagen-actual" class="imagen-actual"></small>
+                <img class="img-preview" id="cat-preview" alt="Vista previa">
+              </div>
+            </div>
+            <div class="form-acciones">
+              <button type="submit" class="btn btn-primario">Guardar</button>
+              <button type="button" class="btn btn-cancelar" id="btn-cancelar-catalogo">Cancelar</button>
+            </div>
+          </form>
+          <div class="fotos-extra-wrap" id="cat-fotos-extra-wrap">
+            <p class="fotos-extra-titulo">Fotos adicionales</p>
+            <p class="fotos-extra-ayuda">Sumá más fotos de esta pieza (hasta 8). Se guardan al toque, no hace falta tocar "Guardar".</p>
+            <div class="fotos-extra-lista" id="cat-fotos-extra-lista"></div>
+            <div class="fotos-extra-acciones">
+              <input type="file" id="cat-fotos-extra-input" accept="image/*" multiple>
+              <button type="button" class="btn btn-editar" id="cat-fotos-extra-agregar">+ Agregar fotos</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── GALERÍA ───────────────────────────────────────────────── -->
+      <div class="tab-panel" id="tab-galeria">
+        <div class="seccion-titulo">
+          <span>Fotos de la galería</span>
+          <button class="btn btn-primario" id="btn-nuevo-galeria">+ Agregar foto</button>
+        </div>
+        <div id="lista-galeria"><p class="estado-cargando">Cargando galería…</p></div>
+        <div class="admin-form-wrap" id="form-galeria-wrap">
+          <p class="admin-form-titulo" id="form-galeria-titulo">Nueva foto</p>
+          <form id="form-galeria" enctype="multipart/form-data" novalidate>
+            <input type="hidden" id="gal-id">
+            <div class="form-grid">
+              <div class="campo"><label for="gal-nombre">Nombre *</label><input type="text" id="gal-nombre" required></div>
+              <div class="campo campo-ancho">
+                <label for="gal-imagen">Imagen</label>
+                <input type="file" id="gal-imagen" name="archivo" accept="image/*">
+                <small id="gal-imagen-actual" class="imagen-actual"></small>
+                <img class="img-preview" id="gal-preview" alt="Vista previa">
+              </div>
+            </div>
+            <div class="form-acciones">
+              <button type="submit" class="btn btn-primario">Guardar</button>
+              <button type="button" class="btn btn-cancelar" id="btn-cancelar-galeria">Cancelar</button>
+            </div>
+          </form>
+          <div class="fotos-extra-wrap" id="gal-fotos-extra-wrap">
+            <p class="fotos-extra-titulo">Fotos adicionales</p>
+            <p class="fotos-extra-ayuda">Sumá más fotos de esta pieza (hasta 8). Se guardan al toque, no hace falta tocar "Guardar".</p>
+            <div class="fotos-extra-lista" id="gal-fotos-extra-lista"></div>
+            <div class="fotos-extra-acciones">
+              <input type="file" id="gal-fotos-extra-input" accept="image/*" multiple>
+              <button type="button" class="btn btn-editar" id="gal-fotos-extra-agregar">+ Agregar fotos</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="./recursos/js/admin.js"></script>
+</body>
+</html>

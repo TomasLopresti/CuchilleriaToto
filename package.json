@@ -1,0 +1,32 @@
+{
+  "name": "cuchilleria-toto",
+  "version": "1.0.0",
+  "description": "Backend para el sitio web de Cuchillería Toto",
+  "main": "index.mjs",
+  "scripts": {
+    "dev": "nodemon index.mjs",
+    "start": "node index.mjs",
+    "recrear-bd": "node scripts/recrear.bd.mjs",
+    "crear-admin": "node scripts/crear-admin.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2",
+    "express-rate-limit": "^8.6.0",
+    "heic-convert": "^2.1.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.1.1",
+    "pg": "8.21.0",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.14"
+  }
+}

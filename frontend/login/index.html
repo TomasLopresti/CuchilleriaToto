@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/recursos/imagenes/LogoFinal.png" type="image/png">
+  <title>Ingresar | Cuchillería Toto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/recursos/css/login.css">
+</head>
+<body>
+  <div class="card">
+    <div class="marca">
+      <img src="/recursos/imagenes/LogoFinal.png" alt="Cuchillería Toto">
+      <h1>Cuchillería Toto</h1>
+      <span>Panel de administración</span>
+    </div>
+    <form id="form">
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" name="usuario" required autocomplete="username">
+      <label for="pass">Contraseña</label>
+      <input type="password" id="pass" name="pass" required autocomplete="current-password">
+      <button type="submit">Ingresar</button>
+      <p class="error" id="error">Usuario o contraseña incorrectos.</p>
+    </form>
+  </div>
+
+  <script src="/recursos/js/login.js"></script>
+</body>
+</html>

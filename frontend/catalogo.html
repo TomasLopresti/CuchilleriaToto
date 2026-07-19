@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./recursos/imagenes/LogoFinal.png" type="image/png">
+    <title>Catálogo | Cuchillería Toto</title>
+    <link rel="stylesheet" href="./recursos/css/index.css">
+    <script type="module" src="./recursos/js/index.js"></script>
+    <script type="module" src="./recursos/js/mensaje.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./recursos/imagenes/LogoFinal.png" alt="Logo">
+                <span>Cuchillería Toto</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html" class="activo">Catálogo</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="seccion seccion-centrada">
+            <span class="seccion-kicker">Piezas de autor</span>
+            <h2>Catálogo de productos</h2>
+            <p class="seccion-intro">Forjamos tradición en cada hoja. Consultanos por WhatsApp directamente desde cualquier pieza del catálogo.</p>
+        </section>
+        <section class="seccion">
+            <div class="grid-productos catalogo-lista"></div>
+        </section>
+        <section class="seccion seccion-centrada">
+            <span class="seccion-kicker">A tu medida</span>
+            <h2>Armá tu cuchillo personalizado</h2>
+            <form action="catalogo.html" method="post" class="catalogo-form">
+                <div class="catalogo-form-row">
+                    <label class="catalogo-label"><strong>Hoja</strong></label>
+                    <span>
+                        <label for="tamano">Tamaño</label>
+                        <select name="tamano" id="tamano">
+                            <option value="...">...</option>
+                            <option value="10 - 12cm">10 - 12cm</option>
+                            <option value="12 - 14cm">12 - 14cm</option>
+                            <option value="14 - 16cm">14 - 16cm</option>
+                            <option value="16 - 18cm">16 - 18cm</option>
+                        </select>
+                        <label for="estilo">Estilo</label>
+                        <select name="estilo" id="estilo">
+                            <option value="...">...</option>
+                            <option value="Pulida">Pulida</option>
+                            <option value="Golpeada">Golpeada</option>
+                            <option value="Rustica">Rústica</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="catalogo-form-row">
+                    <label class="catalogo-label"><strong>Cabo</strong></label>
+                    <span>
+                        <input type="radio" name="cabo" value="Madera Oscura" id="cabo-oscura">
+                        <label for="cabo-oscura">Madera Oscura</label>
+                        <input type="radio" name="cabo" value="Madera Clara" id="cabo-clara">
+                        <label for="cabo-clara">Madera Clara</label>
+                    </span>
+                </div>
+                <div class="catalogo-form-row">
+                    <label class="catalogo-label"><strong>Grabado</strong></label>
+                    <span>
+                        <label for="grabado-lugar">Lugar</label>
+                        <select name="grabado-lugar" id="grabado-lugar">
+                            <option value="...">...</option>
+                            <option value="Hoja">Hoja</option>
+                            <option value="Cabo">Cabo</option>
+                            <option value="Vaina">Vaina</option>
+                        </select>
+                        <label for="grabado-texto">Texto</label>
+                        <input type="text" name="grabado-texto" id="grabado-texto">
+                    </span>
+                </div>
+                <button type="submit" id="boton-consulta">Presupuestar por WhatsApp</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-marca">Cuchillería Toto</p>
+                <p class="footer-desc">Artesanos forjando cuchillos con pasión, precisión y respeto por la tradición.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li>
+                        <a href="https://wa.me/3512428444" target="nuevo">
+                            <img src="./recursos/imagenes/whatsapp.png" alt="whatsapp">
+                            351 242-8444
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/cuchilleriatoto?igsh=MWNwNGl0OW1ucXQxNw==" target="nuevo">
+                            <img src="./recursos/imagenes/Logo ig.png" alt="Instagram">
+                            @cuchilleriatoto
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:cuchilleriatoto@gmail.com">
+                            <img src="./recursos/imagenes/gmail.png" alt="mail">
+                            cuchilleriatoto@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">© 2026 Cuchillería Toto. Forjado con tradición.</p>
+    </footer>
+</body>
+</html>

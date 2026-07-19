@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./recursos/imagenes/LogoFinal.png" type="image/png">
+    <title>Contacto | Cuchillería Toto</title>
+    <link rel="stylesheet" href="./recursos/css/index.css">
+    <script type="module" src="./recursos/js/contacto.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./recursos/imagenes/LogoFinal.png" alt="Logo">
+                <span>Cuchillería Toto</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="seccion seccion-centrada">
+            <span class="seccion-kicker">Hablá con el maestro</span>
+            <h2>Contacto</h2>
+            <p class="seccion-intro">Cada pieza comienza con una conversación. Escribinos por el medio que prefieras.</p>
+        </section>
+        <section class="seccion">
+            <div class="contacto-grid">
+                <div class="contacto-canales">
+                    <a class="contacto-canal" href="https://wa.me/3512428444" target="nuevo">
+                        <img src="./recursos/imagenes/whatsapp.png" alt="whatsapp">
+                        <div>
+                            <p class="contacto-canal-titulo">WhatsApp</p>
+                            <p class="contacto-canal-valor">351 242-8444</p>
+                        </div>
+                    </a>
+                    <a class="contacto-canal" href="mailto:cuchilleriatoto@gmail.com?subject=Consulta&body=Hola%20Toto,%20tengo%20una%20consulta.">
+                        <img src="./recursos/imagenes/gmail.png" alt="mail">
+                        <div>
+                            <p class="contacto-canal-titulo">Email</p>
+                            <p class="contacto-canal-valor">cuchilleriatoto@gmail.com</p>
+                        </div>
+                    </a>
+                    <a class="contacto-canal" href="https://www.instagram.com/cuchilleriatoto?igsh=MWNwNGl0OW1ucXQxNw==" target="nuevo">
+                        <img src="./recursos/imagenes/Logo ig.png" alt="Instagram">
+                        <div>
+                            <p class="contacto-canal-titulo">Instagram</p>
+                            <p class="contacto-canal-valor">@cuchilleriatoto</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="contacto-form-wrap">
+                    <form id="contacto-form" class="contacto-form">
+                        <label for="id-nombre">Nombre</label>
+                        <input type="text" name="nombre" id="id-nombre" required>
+                        <label for="id-mail">Mail</label>
+                        <input type="email" name="mail" id="id-mail" required>
+                        <label for="id-mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="id-mensaje" rows="4" required></textarea>
+                        <div class="contacto-form-acciones">
+                            <button type="submit">Enviar</button>
+                            <button type="reset">Borrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-marca">Cuchillería Toto</p>
+                <p class="footer-desc">Artesanos forjando cuchillos con pasión, precisión y respeto por la tradición.</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li>
+                        <a href="https://wa.me/3512428444" target="nuevo">
+                            <img src="./recursos/imagenes/whatsapp.png" alt="whatsapp">
+                            351 242-8444
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/cuchilleriatoto?igsh=MWNwNGl0OW1ucXQxNw==" target="nuevo">
+                            <img src="./recursos/imagenes/Logo ig.png" alt="Instagram">
+                            @cuchilleriatoto
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:cuchilleriatoto@gmail.com">
+                            <img src="./recursos/imagenes/gmail.png" alt="mail">
+                            cuchilleriatoto@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copy">© 2026 Cuchillería Toto. Forjado con tradición.</p>
+    </footer>
+</body>
+</html>
