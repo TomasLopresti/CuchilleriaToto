@@ -20,7 +20,7 @@ body{
 }
 .marca{text-align:center;margin-bottom:1.5rem;}
 .marca img{width:70px;height:auto;margin-bottom:.5rem;}
-.marca h1{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--tierra);}
+.marca h1{font-family:'Cinzel',serif;font-weight:700;letter-spacing:.03em;font-size:1.4rem;color:var(--tierra);}
 .marca span{display:block;font-size:.9rem;color:var(--texto-sua);letter-spacing:.05em;}
 label{display:block;font-weight:600;margin:.9rem 0 .3rem;color:var(--texto-sua);}
 input{

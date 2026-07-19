@@ -5,6 +5,22 @@ function escapeHtml(valor) {
   return String(valor).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
 }
 
+// Las medidas se guardan como un solo texto ("medidas" en la BD), pero se cargan
+// desde dos casilleros numéricos separados (hoja / con cabo). Estas funciones
+// arman ese texto con la redacción predeterminada y lo vuelven a separar al editar.
+function armarMedidas(hoja, cabo) {
+  const partes = []
+  if (hoja) partes.push(`${hoja} cm de hoja`)
+  if (cabo) partes.push(`${cabo} cm con cabo`)
+  return partes.join(' · ')
+}
+function parsearMedidas(texto) {
+  if (!texto) return { hoja: '', cabo: '' }
+  const hoja = texto.match(/([\d.,]+)\s*cm\s*de\s*hoja/i)
+  const cabo = texto.match(/([\d.,]+)\s*cm\s*con\s*cabo/i)
+  return { hoja: hoja ? hoja[1] : '', cabo: cabo ? cabo[1] : '' }
+}
+
 function mostrarNotificacion(mensaje, tipo = 'exito') {
   const notif = document.createElement('div')
   notif.className = `notificacion ${tipo}`
@@ -177,7 +193,9 @@ async function editarProducto(id) {
     document.getElementById('cat-id').value      = p.id
     document.getElementById('cat-nombre').value   = p.nombre   || ''
     document.getElementById('cat-precio').value   = p.precio   || ''
-    document.getElementById('cat-medidas').value  = p.medidas  || ''
+    const medidas = parsearMedidas(p.medidas)
+    document.getElementById('cat-medida-hoja').value = medidas.hoja
+    document.getElementById('cat-medida-cabo').value = medidas.cabo
     document.getElementById('cat-material').value = p.material || ''
     document.getElementById('cat-cabo').value     = p.cabo     || ''
     const $prev = document.getElementById('cat-preview')
@@ -218,7 +236,9 @@ document.getElementById('form-catalogo').addEventListener('submit', async (e) =>
   const formData = new FormData()
   formData.append('nombre', nombre)
   formData.append('precio', precio)
-  formData.append('medidas',  document.getElementById('cat-medidas').value.trim())
+  const medidaHoja = document.getElementById('cat-medida-hoja').value.trim()
+  const medidaCabo = document.getElementById('cat-medida-cabo').value.trim()
+  formData.append('medidas',  armarMedidas(medidaHoja, medidaCabo))
   formData.append('material', document.getElementById('cat-material').value.trim())
   formData.append('cabo',     document.getElementById('cat-cabo').value.trim())
   const archivo = document.getElementById('cat-imagen').files[0]

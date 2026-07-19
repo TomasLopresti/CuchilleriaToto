@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:wght@400;600&family=Cinzel:wght@600;700&display=swap');
 
 :root {
   --oro:       #b89b77;
@@ -42,11 +42,11 @@ body {
 }
 
 .admin-header-titulo {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cinzel', serif;
   color: var(--oro);
-  font-size: 1.15em;
+  font-size: 1.1em;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
 }
 
 .admin-header-sub {

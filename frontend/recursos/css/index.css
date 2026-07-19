@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@600;700&display=swap');
 
 /* VARIABLES */
 :root {
@@ -58,10 +58,10 @@ header .logo a {
 header .logo img { width: 34px; height: auto; }
 
 header .logo span {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 1.35em;
+    letter-spacing: 0.03em;
+    font-size: 1.25em;
     color: var(--tierra);
 }
 
@@ -588,10 +588,10 @@ footer {
 }
 
 footer .footer-marca {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 1.2em;
+    letter-spacing: 0.03em;
+    font-size: 1.1em;
     color: var(--tierra);
     margin-bottom: 6px;
 }
