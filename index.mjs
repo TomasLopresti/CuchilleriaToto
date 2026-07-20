@@ -9,6 +9,7 @@ import rutasModuloGaleria from './modulos/galeria/rutas.galeria.mjs'
 import rutasWeb from './modulos/web/rutas.web.mjs'
 import rutasAuth from './modulos/autenticacion/rutas.aut.mjs'
 import { verificarAcceso } from './modulos/autenticacion/controlador.aut.mjs'
+import { CARPETA_ARCHIVOS } from './utilidades/rutas.archivos.mjs'
 
 const PUERTO = process.env.PORT || process.env.PUERTO || 3000
 const PRODUCCION = process.env.NODE_ENV === 'production'
@@ -74,7 +75,7 @@ app.use('/login', express.static(path.resolve('./frontend/login')))
 
 app.use(express.static(path.resolve('./frontend')))
 
-app.use('/archivos', express.static(path.resolve('./archivos')))
+app.use('/archivos', express.static(CARPETA_ARCHIVOS))
 
 app.listen(PUERTO, () => {
     console.log(`Servidor en http://localhost:${PUERTO}`)

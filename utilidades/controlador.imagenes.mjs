@@ -2,8 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import * as modeloImagenes from './modelo.imagenes.mjs'
 import { manejarSubidaMultiple, procesarYGuardarImagen } from './subida.imagenes.mjs'
-
-const CARPETA_ARCHIVOS = path.resolve('archivos')
+import { CARPETA_ARCHIVOS } from './rutas.archivos.mjs'
 
 async function borrarArchivoSiExiste(nombre) {
     if (!nombre) return

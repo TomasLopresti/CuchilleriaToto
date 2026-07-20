@@ -4,11 +4,11 @@ import fs from 'node:fs/promises'
 import crypto from 'node:crypto'
 import sharp from 'sharp'
 import convertirHeic from 'heic-convert'
+import { CARPETA_ARCHIVOS } from './rutas.archivos.mjs'
 
 const ANCHO_MAXIMO = 1600
 const CALIDAD_JPEG = 82
 const TAMANIO_MAXIMO_BYTES = 15 * 1024 * 1024 // 15MB
-const CARPETA_ARCHIVOS = path.resolve('archivos')
 
 // Muchos navegadores no mandan un mimetype "image/*" para .heic/.heif (mandan
 // application/octet-stream o directamente nada), así que además del mimetype
